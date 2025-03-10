@@ -77,7 +77,7 @@ const Navbar = () => {
         } md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 transition-all duration-300 ease-in-out`}
       >
         <ul className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 w-full md:w-auto">
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <li 
               key={item.name}
               className="flex items-center justify-between border-b md:border-b-0 pb-2 md:pb-0"

@@ -1,7 +1,6 @@
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import Image from "next/image";
-import Link from "next/link";
 
 const Page = () => {
   return (
