@@ -1,11 +1,12 @@
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Page = () => {
   return (
     <main className="px-4 md:px-8 lg:px-12 overflow-x-hidden">
-      <section className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8 md:gap-12 lg:gap-20 py-8 md:py-12">
+      <section className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 md:gap-5 lg:gap-36 py-8 md:py-12">
         {/* Text Content - Below image on mobile, Left on desktop */}
         <div className="flex flex-col justify-center space-y-4 md:space-y-5 text-center md:text-left w-full md:w-auto animate-fade-in">
           <p className="text-base md:text-lg animate-slide-up">
@@ -18,7 +19,7 @@ const Page = () => {
           </h1>
 
           <button className="self-center md:self-start rounded-full border-2 border-[var(--primary)] flex items-center p-2 px-5 hover:bg-[var(--primary)] hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 group">
-            Contact Us 
+            Contact Us
             <span className="ml-3 inline-flex transition-transform duration-300 group-hover:translate-x-2">
               <HiOutlineArrowRight />
             </span>
@@ -26,16 +27,58 @@ const Page = () => {
         </div>
 
         {/* Image - Above text on mobile, Right on desktop */}
-        <div className="mt-0 mb-6 md:mt-0 md:mb-0 animate-fade-in">
+        <div className="mt-0 mb-6 md:mt-0 md:mb-0 animate-fade-in relative inline-block">
+          {/* Main Image */}
           <Image
             src="/girl.png"
-            className="rounded-lg w-full max-w-xs md:max-w-sm lg:max-w-md shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+            className="rounded-lg md:max-w-sm md:flex-shrink-0 lg:max-w-md shadow-lg transition-transform duration-300 hover:scale-[1.02]"
             alt="GlobeTrek Logo"
             width={300}
             height={300}
             priority
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
+
+          {/* Avatars positioned around the image */}
+
+          {/* Germany (de.png) - Top Left */}
+          <div className="absolute top-[10px] left-[10px] bg-white shadow-lg w-12 h-12 rounded-full flex items-center justify-center">
+            <Avatar>
+              <AvatarImage src="de.png" alt="Germany Flag" />
+              <AvatarFallback>DE</AvatarFallback>
+            </Avatar>
+          </div>
+
+          {/* Spain (es.png) - Bottom Left */}
+          <div className="absolute bottom-[-10px] left-[-10px] bg-white shadow-lg w-12 h-12 rounded-full flex items-center justify-center">
+            <Avatar>
+              <AvatarImage src="es.png" alt="Spain Flag" />
+              <AvatarFallback>ES</AvatarFallback>
+            </Avatar>
+          </div>
+
+          {/* UK (gb.png) - Top Right */}
+          <div className="absolute top-[50px] right-[-10px] bg-white shadow-lg w-12 h-12 rounded-full flex items-center justify-center">
+            <Avatar>
+              <AvatarImage src="gb.png" alt="UK Flag" />
+              <AvatarFallback>GB</AvatarFallback>
+            </Avatar>
+          </div>
+
+          {/* Random Extra Flag (France - fr.png) - Bottom Right */}
+          {/* <div className="absolute bottom-[-10px] right-[-10px] bg-white shadow-lg w-12 h-12 rounded-full flex items-center justify-center">
+            <Avatar>
+              <AvatarImage src="fr.png" alt="France Flag" />
+              <AvatarFallback>FR</AvatarFallback>
+            </Avatar>
+          </div> */}
+          {/* Random Extra Flag (France - fr.png) - Bottom Right */}
+          <div className="absolute bottom-[80px] right-[-10px] bg-white shadow-lg w-12 h-12 rounded-full flex items-center justify-center">
+            <Avatar>
+              <AvatarImage src="ae.png" alt="France Flag" />
+              <AvatarFallback>AE</AvatarFallback>
+            </Avatar>
+          </div>
         </div>
       </section>
     </main>
