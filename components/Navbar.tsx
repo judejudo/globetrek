@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <header 
-      className={`flex flex-col md:flex-row rounded-md justify-between m-2 md:m-3 lg:m-5 mx-4 md:mx-8 lg:mx-12 xl:mx-48  items-center p-2 font-medium text-sm bg-white md:rounded-full relative ${
+      className={`flex flex-col md:flex-row  rounded-md justify-between m-2 md:m-3 lg:m-5 mx-4 md:mx-8 lg:mx-12 xl:mx-48  items-center p-2 font-medium text-sm bg-white md:rounded-full relative ${
         scrolled ? "shadow-md" : ""
       } transition-all duration-300`}
     >
@@ -82,7 +82,7 @@ const Navbar = () => {
               key={item.name}
               className="flex items-center justify-between border-b md:border-b-0 pb-2 md:pb-0"
             >
-              <Link href={item.href} className="hover:text-blue-500 transition-colors duration-300">
+              <Link href={item.href} className="hover:text-[#83CD20] transition-colors duration-300">
                 {item.name}
               </Link>
               <span className="ml-1 transition-transform duration-200 hover:rotate-180">
